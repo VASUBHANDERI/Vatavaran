@@ -8,7 +8,11 @@ export default function SearchBar({ fetchWeatherData }) {
   return (
     <View style={styles.searchBar}>
       <TextInput
+        underlineColorAndroid="transparent"
+        autoFocus={false}
         placeholder="Enter City name"
+        placeholderTextColor="#fff"
+        style={{ color: "white",}}
         value={cityName}
         onChangeText={(text) => setCityName(text)}
         onPress={() => fetchWeatherData(cityName)}
@@ -16,7 +20,7 @@ export default function SearchBar({ fetchWeatherData }) {
       <EvilIcons
         name="search"
         size={28}
-        color="black"
+        color="white"
         onPress={() => fetchWeatherData(cityName)}
       />
     </View>
@@ -35,7 +39,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     marginHorizontal: 10,
     paddingHorizontal: 10,
-    backgroundColor: "lightgray",
+    backgroundColor: "rgba(0,0,0, 0.5)",
     borderColor: "white",
   },
 });

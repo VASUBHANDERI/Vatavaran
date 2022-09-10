@@ -263,7 +263,7 @@ export default function Weather({ weatherData, fetchWeatherData }) {
         source={wsb}
         style={styles.backgroundImg}
         resizeMode="cover"
-        blurRadius={20}
+        // blurRadius={5}
       >
         <SearchBar fetchWeatherData={fetchWeatherData} />
 
@@ -323,7 +323,7 @@ export default function Weather({ weatherData, fetchWeatherData }) {
               <Text
                 style={{
                   ...styles.headerText,
-                  color: textColor,
+                  color: "white",
                   fontSize: 30,
                   fontWeight: 400,
                   marginTop: 0,
