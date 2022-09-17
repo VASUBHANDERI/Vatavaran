@@ -3,6 +3,13 @@ import { View, TextInput, StyleSheet, Dimensions } from "react-native";
 import { EvilIcons } from "@expo/vector-icons";
 
 export default function SearchBar({ fetchWeatherData }) {
+
+    const handleKeyDown = (e) => {
+    if (e.nativeEvent.key === 'Enter') {
+      fetchWeatherData(cityName);
+    }
+  };
+
   const [cityName, setCityName] = useState("");
 
   return (
@@ -10,12 +17,13 @@ export default function SearchBar({ fetchWeatherData }) {
       <TextInput
         underlineColorAndroid="transparent"
         autoFocus={false}
+        mode='outlined'
         placeholder="Enter City name"
         placeholderTextColor="#fff"
-        style={{ color: "white",}}
+        style={{ color: "white", flex:1,outline:'none'}}
         value={cityName}
         onChangeText={(text) => setCityName(text)}
-        onPress={() => fetchWeatherData(cityName)}
+        onKeyPress={handleKeyDown}
       />
       <EvilIcons
         name="search"
