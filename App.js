@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
 import Weather from "./components/Weather";
 import SearchBar from "./components/SearchBar";
+import { wsb } from "./assets/backgroundImages/index";
 
 const API_KEY = "a9f648abefea53e223d31f6f5170121e";
 const lang = "hi";
@@ -41,10 +42,14 @@ export default function App() {
   } else if (weatherData === null) {
     return (
       <View style={styles.container}>
-        <SearchBar fetchWeatherData={fetchWeatherData} />
-        <Text style={styles.primaryText}>
-          City Not Found! Try Different City
-        </Text>
+        <View style={{ flex: 1 }}>
+          <SearchBar fetchWeatherData={fetchWeatherData} />
+        </View>
+        <View style={{ flex: 9 ,justifyContent:'center'}}>
+          <Text style={styles.primaryText}>
+            City Not Found! Try Different City
+          </Text>
+        </View>
       </View>
     );
   }
@@ -61,8 +66,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
   },
+
   primaryText: {
     margin: 20,
     fontSize: 28,
