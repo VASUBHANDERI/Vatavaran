@@ -4,6 +4,6 @@ It is a website created with React Native and the Open Weather API that provides
 
 ## Screenshots
 
-## ![Onboarding](./screenshots/SS1.jpeg)
+## ![ScreenShot 1](./screenshots/SS1.jpeg)
 
-## ![Login](./screenshots/SS1.jpeg)
+## ![ScreenShot 2](./screenshots/SS2.jpeg)
