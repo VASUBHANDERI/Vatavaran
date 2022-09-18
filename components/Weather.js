@@ -426,6 +426,7 @@ const styles = StyleSheet.create({
   backgroundImg: {
     flex: 1,
     width: Dimensions.get("screen").width,
+    height: Dimensions.get("screen").height,
   },
   headerText: {
     fontSize: 36,
